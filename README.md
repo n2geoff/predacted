@@ -1,23 +1,21 @@
-# Preact + HTM + Preact Signals standalone
+# Predacted
 
-[![](https://data.jsdelivr.com/v1/package/npm/preact-htm-signals-standalone/badge)](https://www.jsdelivr.com/package/npm/preact-htm-signals-standalone)
+Preact + XHTM + Signals
 
-A single, standalone version of [Preact](https://github.com/preactjs/preact), [HTM](https://github.com/developit/htm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file.
+**NOT REACT. NO COMPAT. NO HOOKS. NO BS.**
 
-One single file that you can use via [CDN](https://cdn.jsdelivr.net/npm/preact-htm-signals-standalone/dist/standalone.js) or [download locally](https://github.com/mujahidfa/preact-htm-signals-standalone/blob/main/dist/standalone.js) for offline use.
+A standalone Preact subset designed to simplify building ui offline. 
+
+A single, standalone version of [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file you can download via [download locally](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) for offline use.
 
 ## Usage
 
-### Direct CDN import in HTML
+[Download](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) the standalone file locally then:
 
 ```html
 <div id="app"></div>
 <script type="module">
-  import {
-    html,
-    render,
-    signal,
-  } from "https://cdn.jsdelivr.net/npm/preact-htm-signals-standalone/dist/standalone.js";
+  import {html, render, signal } from "./predacted.min.js";
 
   const count = signal(0);
 
@@ -37,78 +35,28 @@ One single file that you can use via [CDN](https://cdn.jsdelivr.net/npm/preact-h
 </script>
 ```
 
-### Via npm (not recommended)
+## Inspiration
 
-I don't recommend installing this package via NPM. It's best to install [Preact](https://github.com/preactjs/preact), [HTM](https://github.com/developit/htm) and [Preact Signals](https://github.com/preactjs/signals) separately:
+**I AM NOT A FAN OF REACT**, but then there is **Preact**, by all accounts it is React (compatible), however at its core it is something different, something small, something fast and with a *little* tweaking it is something special and that surprised me.
 
-```sh
-npm install preact htm @preact/signals
-# or yarn
-yarn add preact htm @preact/signals
-# or pnpm
-pnpm install preact htm @preact/signals
-```
+Preact homepage shows a great progressive enhancement path from `h`, to `htm` for a **NO-BUILD** setup to using `jsx` and beyond with `signals`, but all this great progress is separated, so what if you combined them...
 
-## Motivation and goals
+...this is where [mujahidfa](https://github.com/mujahidfa/preact-htm-signals-standalone), came in and had the same goal of an offline single-file version of Preact with `html` and `signals` as a tiny UI framework solution...
 
-My main motivation is to be able to download the entirety of Preact + HTM + Preact Signals offline in a single file.
+...however, we differ in approach.  I have **NO** interest in *Reactisms*, so **NO HOOKS**, **NO CREATE/USE**, and I prefer [XHTM](https://github.com/dy/xhtm) over [HTM](https://github.com/developit/htm)
 
-You can absolutely do the following (and it works fine):
+> Is it going to break? Lets see
 
-```html
-<script type="module">
-  import { h, render } from "https://cdn.skypack.dev/preact";
-  import htm from "https://cdn.skypack.dev/htm";
-  import { signal } from "https://cdn.skypack.dev/@preact/signals";
-  const html = htm.bind(h);
-</script>
-```
+## License
 
-or go shorter and do this:
+All rights belong to [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals) owners/maintainers.
 
-```html
-<script type="module">
-  import { html, render } from "https://esm.sh/htm/preact";
-  import { signal } from "https://esm.sh/@preact/signals";
-</script>
-```
+> This is just an opinionated build
 
-or even shorter (via [npm.reversehttp.com](https://npm.reversehttp.com/), thanks [Jason Miller](https://github.com/developit) for the tool!):
+## Build
 
-```html
-<script type="module">
-  import {
-    html,
-    render,
-    signal,
-  } from "https://npm.reversehttp.com/preact,htm/preact,@preact/signals";
-</script>
-```
-
-However, due to my work limitations (i.e. my internal Preact apps run on restricted corp intranet), having a downloadable, offline version is required, hence the need for a prebundled, no-dependency, single script that I can easily download and use offline.
-
-Simply put, my ideal situation looks like this (made possible by this project):
-
-```html
-<script type="module">
-  // Download the prebundled scripts locally for offline use
-  import { html, render, signal } from "./preact-htm-signals-standalone.js";
-</script>
-```
-
-Inspired by the [standalone version of Preact + HTM](https://github.com/developit/htm#installation).
-
-All rights belong to [Preact](https://github.com/preactjs/preact), [HTM](https://github.com/developit/htm) and [Preact Signals](https://github.com/preactjs/signals) owners/maintainers.
-
-## Building from source
-
-Install and bundle them (via [Microbundle](https://github.com/developit/microbundle)):
+> Leverages [Bun Bundler](https://bun.com/docs/bundler) to keep deps minimal
 
 ```sh
-git clone https://github.com/mujahidfa/preact-htm-signals-standalone.git
-cd preact-htm-signals-standalone
-pnpm i
-pnpm bundle
-npm publish --dry-run # to test out publishing to npm
-npm publish
+bun run build
 ```

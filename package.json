@@ -1,47 +1,34 @@
 {
-  "name": "preact-htm-signals-standalone",
-  "version": "0.0.16",
-  "description": "A single, standalone version of Preact, HTM and Preact Signals. No external dependencies, just one single file.",
+  "name": "predacted",
+  "version": "0.9.0",
+  "description": "Preact+XHTM+Signals. Single file, nothing else.",
   "type": "module",
-  "main": "dist/standalone.umd.js",
-  "module": "dist/standalone.js",
-  "umd:main": "dist/standalone.umd.js",
+  "main": "dist/predacted.min.js",
   "scripts": {
-    "bundle": "microbundle index.js -o ./dist/standalone.js -f es,umd --no-sourcemap --target web"
+    "build": "bun ./build.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mujahidfa/preact-htm-signals-standalone.git"
+    "url": "git+https://github.com/n2geoff/predacted.git"
   },
-  "homepage": "https://github.com/mujahidfa/preact-htm-signals-standalone",
+  "homepage": "https://github.com/n2geoff/predacted.git",
   "keywords": [
-    "preact signals",
-    "signals",
-    "standalone",
-    "cdn",
     "preact",
-    "react",
-    "ui",
-    "user interface",
-    "virtual dom",
-    "vdom",
-    "components",
-    "dom diff",
-    "front-end",
-    "framework",
-    "Hyperscript Tagged Markup",
-    "tagged template",
-    "template literals",
+    "signals",
+    "xhtm",
+    "standalone",
     "html",
-    "htm",
-    "jsx",
-    "virtual dom",
-    "hyperscript"
+    "h",
+    "hyperscript",
+    "template literals",
+    "tagged template",
+    "components",
+    "framework",
+    "client-side"
   ],
   "devDependencies": {
-    "@preact/signals": "^1.2.2",
-    "htm": "3.1.1",
-    "microbundle": "^0.15.1",
-    "preact": "^10.19.3"
+    "@preact/signals": "^2.8.1",
+    "xhtm": "1.6.3",
+    "preact": "^10.28.4"
   }
 }
