@@ -1,5 +1,5 @@
 const VERSION = "0.9.0";
-const BANNER = `/* Predacted.min.js v${VERSION} | MIT License | https://github.com/n2geoff/predacted */\n`;
+const BANNER = `/* Predacted.min.js v${VERSION} | https://github.com/n2geoff/predacted */\n`;
 
 async function build() {
   const filename = "predacted.min.js";
