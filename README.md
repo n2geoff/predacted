@@ -2,7 +2,7 @@
 
 **NOT REACT. NO COMPAT. NO HOOKS. NO BS.**
 
-A standalone version of [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file you can download via [download locally](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) and use offline.
+A standalone version of [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file you can download locally [here](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) and use offline.
 
 ## Usage
 
