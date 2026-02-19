@@ -1,16 +1,12 @@
 # Predacted
 
-Preact + XHTM + Signals
-
 **NOT REACT. NO COMPAT. NO HOOKS. NO BS.**
 
-A standalone Preact subset designed to simplify building ui offline. 
-
-A single, standalone version of [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file you can download via [download locally](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) for offline use.
+A standalone version of [Preact](https://github.com/preactjs/preact), [XHTM](https://github.com/dy/xhtm) and [Preact Signals](https://github.com/preactjs/signals). No external dependencies, just one single file you can download via [download locally](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) and use offline.
 
 ## Usage
 
-[Download](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) the standalone file locally then:
+[Download](https://github.com/n2geoff/predacted/blob/main/dist/predacted.min.js) the standalone `predacted.min.js` file locally then:
 
 ```html
 <div id="app"></div>
@@ -37,7 +33,7 @@ A single, standalone version of [Preact](https://github.com/preactjs/preact), [X
 
 ## Inspiration
 
-**I AM NOT A FAN OF REACT**, but then there is **Preact**, by all accounts it is React (compatible), however at its core it is something different, something small, something fast and with a *little* tweaking it is something special and that surprised me.
+**I AM NOT A FAN OF REACT**, but then there is **Preact**, by all accounts it is React (compatible), however its core is something different, something small, something fast and with a *little* tweaking it is something special and that surprised me.
 
 Preact homepage shows a great progressive enhancement path from `h`, to `htm` for a **NO-BUILD** setup to using `jsx` and beyond with `signals`, but all this great progress is separated, so what if you combined them...
 
