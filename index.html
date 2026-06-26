@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Predacted Examples</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="module">
+            import { html, render, signal } from "./dist/predacted.min.js";
+
+            function Counter() {
+                const count = signal(0);
+
+                return html`
+                    <div>
+                        <button onClick=${() => (count.value += 1)}>
+                            Increment with signal
+                        </button>
+                        <p>Counter: ${count}</p>
+                    </div>
+                `;
+            }
+
+            function App() {
+                return html`
+                    <div>
+                        <h1 class>Hello World!</h1>
+                        ${Counter()}
+                        <${Counter} />
+                    </div>
+                `;
+            }
+
+            render(html`<${App} />`, document.getElementById("app"));
+        </script>
+    </body>
+</html>
