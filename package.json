@@ -27,8 +27,8 @@
     "client-side"
   ],
   "devDependencies": {
-    "@preact/signals": "^2.8.1",
+    "@preact/signals": "^2.9.2",
     "xhtm": "1.6.3",
-    "preact": "^10.28.4"
+    "preact": "^10.29.3"
   }
 }
